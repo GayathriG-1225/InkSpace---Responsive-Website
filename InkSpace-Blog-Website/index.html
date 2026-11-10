@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InkSpace | Stories Worth Sharing</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <header class="navbar">
+
+        <a href="#" class="logo" onclick="showHome(); return false;">
+            Ink<span>Space.</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="#" class="nav-link active" onclick="showHome(); return false;">Home</a>
+
+            <a href="#articles" class="nav-link">Explore</a>
+
+            <a href="#categories" class="nav-link">Categories</a>
+
+            <a href="#about" class="nav-link">About</a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="search-icon" id="searchToggle" aria-label="Search">
+                ⌕
+            </button>
+
+            <a href="#newsletter" class="subscribe-btn">
+                Subscribe ↗
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- SEARCH BAR -->
+
+    <div class="search-container" id="searchContainer">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for interesting stories..."
+        >
+
+        <button id="closeSearch">✕</button>
+
+    </div>
+
+
+    <!-- HOME PAGE -->
+
+    <div id="homePage">
+
+        <!-- HERO SECTION -->
+
+        <section class="hero-section">
+
+            <div class="hero-content">
+
+                <span class="hero-tag">
+                    ✦ YOUR DAILY DOSE OF INSPIRATION
+                </span>
+
+                <h1>
+                    Ideas that inspire.<br>
+                    Stories that <span>connect.</span>
+                </h1>
+
+                <p>
+                    Discover fresh perspectives, explore creative ideas
+                    and find stories that make you think differently.
+                </p>
+
+                <a href="#articles" class="hero-btn">
+                    Explore Stories <span>→</span>
+                </a>
+
+                <div class="hero-stats">
+
+                    <div>
+                        <h3>120+</h3>
+                        <p>Articles</p>
+                    </div>
+
+                    <div>
+                        <h3>15K+</h3>
+                        <p>Readers</p>
+                    </div>
+
+                    <div>
+                        <h3>08</h3>
+                        <p>Categories</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image-wrapper">
+
+                <img
+                    src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=900"
+                    alt="Creative writing desk"
+                    class="hero-image"
+                >
+
+                <div class="floating-card">
+                    <span>✦ EDITOR'S PICK</span>
+                    <h3>Find inspiration in everyday moments.</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CATEGORY SECTION -->
+
+        <section class="categories-section" id="categories">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-tag">EXPLORE YOUR INTERESTS</span>
+                    <h2>Browse Categories</h2>
+                </div>
+
+                <p>
+                    Find stories that match your curiosity.
+                </p>
+
+            </div>
+
+
+            <div class="category-list">
+
+                <button class="category-btn active" data-category="All">
+                    All Stories
+                </button>
+
+                <button class="category-btn" data-category="Technology">
+                    Technology
+                </button>
+
+                <button class="category-btn" data-category="Lifestyle">
+                    Lifestyle
+                </button>
+
+                <button class="category-btn" data-category="Travel">
+                    Travel
+                </button>
+
+                <button class="category-btn" data-category="Design">
+                    Design
+                </button>
+
+                <button class="category-btn" data-category="Personal Growth">
+                    Personal Growth
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURED ARTICLE -->
+
+        <section class="featured-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-tag">HANDPICKED FOR YOU</span>
+                    <h2>Featured Story</h2>
+                </div>
+            </div>
+
+
+            <div class="featured-card">
+
+                <div class="featured-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1000"
+                        alt="Modern technology workspace"
+                    >
+
+                </div>
+
+                <div class="featured-content">
+
+                    <span class="article-category">TECHNOLOGY</span>
+
+                    <h2>
+                        The Future of Technology:
+                        How AI Is Changing Our Everyday Lives
+                    </h2>
+
+                    <p>
+                        From smarter workplaces to personalized
+                        experiences, discover how artificial
+                        intelligence is transforming the world around us.
+                    </p>
+
+                    <div class="article-meta">
+                        <span>By InkSpace Editorial</span>
+                        <span>•</span>
+                        <span>6 min read</span>
+                    </div>
+
+                    <button class="read-btn" id="featuredRead">
+                        Read Full Story →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LATEST BLOGS -->
+
+        <section class="articles-section" id="articles">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-tag">FRESHLY PUBLISHED</span>
+                    <h2>Latest Stories</h2>
+                </div>
+
+                <span class="article-count" id="articleCount">
+                    0 Stories
+                </span>
+
+            </div>
+
+
+            <!-- BLOG CARDS ARE GENERATED BY JAVASCRIPT -->
+
+            <div class="blog-grid" id="blogGrid">
+
+            </div>
+
+
+            <!-- NO SEARCH RESULTS -->
+
+            <div class="no-results" id="noResults">
+
+                <div>✦</div>
+
+                <h3>No stories found!</h3>
+
+                <p>Try another search or explore a different category.</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+
+        <section class="about-section" id="about">
+
+            <div class="about-content">
+
+                <span class="section-tag">A LITTLE ABOUT US</span>
+
+                <h2>
+                    Every great idea begins with a <span>story.</span>
+                </h2>
+
+                <p>
+                    InkSpace is a creative space for curious minds.
+                    We believe that stories have the power to educate,
+                    inspire and bring people together.
+                </p>
+
+                <a href="#articles" class="about-btn">
+                    Discover More →
+                </a>
+
+            </div>
+
+            <div class="about-decoration">
+                ✦
+            </div>
+
+        </section>
+
+
+        <!-- NEWSLETTER -->
+
+        <section class="newsletter-section" id="newsletter">
+
+            <span class="section-tag">STAY INSPIRED</span>
+
+            <h2>Good stories. Straight to your inbox.</h2>
+
+            <p>
+                Join our community and never miss a fresh perspective.
+            </p>
+
+            <form id="newsletterForm" class="newsletter-form">
+
+                <input
+                    type="email"
+                    id="newsletterEmail"
+                    placeholder="Enter your email address"
+                    required
+                >
+
+                <button type="submit">
+                    Join Us →
+                </button>
+
+            </form>
+
+            <small id="newsletterMessage"></small>
+
+        </section>
+
+    </div>
+
+
+    <!-- ARTICLE READING PAGE -->
+
+    <section class="article-page" id="articlePage">
+
+        <button class="back-btn" id="backBtn">
+            ← Back to Stories
+        </button>
+
+        <div class="article-detail" id="articleDetail">
+
+            <!-- ARTICLE CONTENT GENERATED BY JAVASCRIPT -->
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <a href="#" class="logo footer-logo" onclick="showHome(); return false;">
+                    Ink<span>Space.</span>
+                </a>
+
+                <p>
+                    A place for ideas, inspiration and stories
+                    worth sharing.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Explore</h4>
+
+                <a href="#articles">Latest Stories</a>
+
+                <a href="#categories">Categories</a>
+
+                <a href="#about">About Us</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Categories</h4>
+
+                <a href="#categories">Technology</a>
+
+                <a href="#categories">Lifestyle</a>
+
+                <a href="#categories">Travel</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Connect</h4>
+
+                <a href="#newsletter">Newsletter</a>
+
+                <a href="#about">Our Community</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>© 2026 InkSpace. All rights reserved.</p>
+
+            <p>Designed with creativity ♡</p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
